@@ -14,30 +14,13 @@ namespace Film\Model;
          $this->tableGateway = $tableGateway;
      }
 
-     public function fetchAll($user)
+     public function fetchAll()
      {
-        /*$resultSet = $this->tableGateway->select();
-        return $resultSet;*/
-         $id =  $user;
-         $select = new Select();
-         $select->from(array('a' => 'film'));
-         $select->join(array('u' => 'users') ,'a.user_id = u.id');         // join expression
-         $select->where('a.user_id = "' . $id . '";');
+        $resultSet = $this->tableGateway->select();
+        return $resultSet;
          
-         $resultSet = $this->tableGateway->selectWith($select);
-         return $resultSet;
      }
-     
-     public function getFilmByUser($user) {
-        // $this->isMine();
-        $id = (int) $user->id;
-        $rowset = $this->tableGateway->select(array('user_id' => $id));
-        
-         if (!$rowset) {
-          throw new \Exception("Could not find row $id");
-          } 
-        return $rowset;
-    }
+
 
      public function getFilm($id)
      {
@@ -55,6 +38,9 @@ namespace Film\Model;
          $data = array(
              'realisateur' => $film->realisateur,
              'title'  => $film->title,
+             'categorie' => $film->categorie,
+             'acteur' => $film->acteur,
+             'prix_location' => $film->prix_location,
          );
 
          $id = (int) $film->id;

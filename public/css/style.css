@@ -106,6 +106,7 @@ body > .container .table td, .container .table th {
 
 label > span {
     display: block;
-    width: 80px;
+    padding-left: 10px;
+    width: 120px;
     float: left;
 }

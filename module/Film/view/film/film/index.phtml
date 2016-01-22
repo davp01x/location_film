@@ -6,28 +6,29 @@
  * and open the template in the editor.
  */
 
-$title = 'Mes films';
+$title = 'Tous les films';
  $this->headTitle($title);
  ?>
  <h1><?php echo $this->escapeHtml($title); ?></h1>
- <p>
-     <a href="<?php echo $this->url('film', array('action'=>'add'));?>">Ajouter un nouvel film</a>
-     <br><br>
-     <a href="/location_film_2/public/auth/logout">Se déconnecter</a>
-     
- </p>
+
  
 
  <table class="table">
  <tr>
      <th>Titre</th>
      <th>Realisateur</th>
+     <th>Categorie</th>
+     <th>Acteur</th>
+     <th>Prix de location</th>
      <th>Modification</th>
  </tr>
  <?php foreach ($films as $film) : ?>
  <tr>
      <td><?php echo $this->escapeHtml($film->title);?></td>
      <td><?php echo $this->escapeHtml($film->realisateur);?></td>
+     <td><?php echo $this->escapeHtml($film->categorie);?></td>
+     <td><?php echo $this->escapeHtml($film->acteur);?></td>
+     <td><?php echo $this->escapeHtml($film->prix_location);?></td>
      <td>
          <a href="<?php echo $this->url('film',
              array('action'=>'edit', 'id' => $film->id));?>">Editer</a>

@@ -38,6 +38,27 @@ namespace Film\Form;
              ),
          ));
          $this->add(array(
+             'name' => 'categorie',
+             'type' => 'Text',
+             'options' => array(
+                 'label' => 'Categorie',
+             ),
+         ));
+         $this->add(array(
+             'name' => 'acteur',
+             'type' => 'Text',
+             'options' => array(
+                 'label' => 'Acteur',
+             ),
+         ));
+         $this->add(array(
+             'name' => 'prix_location',
+             'type' => 'Text',
+             'options' => array(
+                 'label' => 'Prix de location',
+             ),
+         ));
+         $this->add(array(
              'name' => 'submit',
              'type' => 'Submit',
              'attributes' => array(

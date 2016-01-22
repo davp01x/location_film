@@ -20,7 +20,7 @@ class User
      * @Annotation\Type("Zend\Form\Element\Text")
      * @Annotation\Required({"required":"true" })
      * @Annotation\Filter({"name":"StripTags"})
-     * @Annotation\Options({"label":"Username:"})
+     * @Annotation\Options({"label":"Identifiant"})
      */
     public $username;
      
@@ -28,19 +28,19 @@ class User
      * @Annotation\Type("Zend\Form\Element\Password")
      * @Annotation\Required({"required":"true" })
      * @Annotation\Filter({"name":"StripTags"})
-     * @Annotation\Options({"label":"Password:"})
+     * @Annotation\Options({"label":"Mot de passe"})
      */
     public $password;
      
     /**
      * @Annotation\Type("Zend\Form\Element\Checkbox")
-     * @Annotation\Options({"label":"Remember Me ?:"})
+     * @Annotation\Options({"label":"Mémorise"})
      */
     public $rememberme;
      
     /**
      * @Annotation\Type("Zend\Form\Element\Submit")
-     * @Annotation\Attributes({"value":"Submit"})
+     * @Annotation\Attributes({"value":"Se connecter"})
      */
     public $submit;
 }

@@ -118,8 +118,11 @@ namespace Film\Controller;
      
      public function indexAction()
      {
+         
+         
          return new ViewModel(array(
-             'films' => $this->getFilmTable()->fetchAll($this->getServiceLocator()->get('SanAuth\Model\MyAuthStorage')->read()),
+             'films' => $this->getFilmTable()->fetchAll(),
+             
          ));
      }
      

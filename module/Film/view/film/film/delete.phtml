@@ -12,8 +12,11 @@ $title = 'Supprimer un film';
  <h1><?php echo $this->escapeHtml($title); ?></h1>
 
  <p>Etes-vous sûr de vouloir supprimer 
-     '<?php echo $this->escapeHtml($film->title); ?>' by
-     '<?php echo $this->escapeHtml($film->realisateur); ?>'?
+     '<?php echo $this->escapeHtml($film->title); ?>' de
+     '<?php echo $this->escapeHtml($film->realisateur); ?>' de catégorie 
+     '<?php echo $this->escapeHtml($film->categorie); ?>' avec le(s) acteur(s) 
+     '<?php echo $this->escapeHtml($film->acteur); ?>' et d'un prix de 
+     '<?php echo $this->escapeHtml($film->prix_location); ?>'?
  </p>
  <?php
  $url = $this->url('film', array(

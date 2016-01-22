@@ -11,6 +11,9 @@ namespace Film\Model;
  {
      public $id;
      public $realisateur;
+     public $categorie;
+     public $acteur;
+     public $prix_location;
      public $title;
      protected $inputFilter;                       // <-- Add this variable
 
@@ -18,6 +21,9 @@ namespace Film\Model;
      {
          $this->id     = (isset($data['id']))     ? $data['id']     : null;
          $this->realisateur = (isset($data['realisateur'])) ? $data['realisateur'] : null;
+         $this->categorie = (isset($data['categorie'])) ? $data['categorie'] : null;
+         $this->acteur = (isset($data['acteur'])) ? $data['acteur'] : null;
+         $this->prix_location = (isset($data['prix_location'])) ? $data['prix_location'] : null;
          $this->title  = (isset($data['title']))  ? $data['title']  : null;
      }
      
@@ -63,9 +69,10 @@ namespace Film\Model;
                      ),
                  ),
              ));
+             
 
              $inputFilter->add(array(
-                 'name'     => 'title',
+                 'name'     => 'categorie',
                  'required' => true,
                  'filters'  => array(
                      array('name' => 'StripTags'),
@@ -81,6 +88,34 @@ namespace Film\Model;
                          ),
                      ),
                  ),
+             ));
+             
+             $inputFilter->add(array(
+                 'name'     => 'acteur',
+                 'required' => true,
+                 'filters'  => array(
+                     array('name' => 'StripTags'),
+                     array('name' => 'StringTrim'),
+                 ),
+                 'validators' => array(
+                     array(
+                         'name'    => 'StringLength',
+                         'options' => array(
+                             'encoding' => 'UTF-8',
+                             'min'      => 1,
+                             'max'      => 100,
+                         ),
+                     ),
+                 ),
+             ));
+             
+             $inputFilter->add(array(
+                 'name'     => 'prix_location',
+                 'required' => true,
+                 'filters'  => array(
+                     array('name' => 'Int'),
+                 ),
+                 
              ));
 
              $this->inputFilter = $inputFilter;
