@@ -16,3 +16,5 @@ Fonctionnalités :
   - Un layout qui intègre d'autres fonctionnalités : bouton de déconnexion, retour à la page d'accueil, consulter ses films, ajouter un film
   - Ajout de différentes colonnes qui sont les attributs d'un film : prix de location, acteur, réalisateur, catégorie
   - L'ajout de film ainsi que l'édition intègre désormais les attributs comme prix de location, acteur, réalisateur, catégorie
+
+Note : Le base de donnée sous un fichier sql se trouve dans le répertoire public.
