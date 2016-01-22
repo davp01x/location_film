@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 22 Janvier 2016 à 21:21
+-- Généré le :  Ven 22 Janvier 2016 à 21:47
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -81,8 +81,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `user_name`, `pass_word`, `user_firstname`, `mail`, `isAdmin`) VALUES
 (1, 'admin', 'bdbd6db1d8cc09a957e86180fda9442a', 'admin', 'admin@film.location.fr', 1),
-(2, 'phan', '172522ec1028ab781d9dfd17eaca4427', 'phan', 'david_phan@hotmail.fr', 0),
-(3, 'lahmourate', 'be60b431a46fcc7bf5ee4f7712993e3b', 'achraf', '', 0);
+(2, 'phan', '172522ec1028ab781d9dfd17eaca4427', 'david', 'david_phan@hotmail.fr', 0),
+(3, 'lahmourate', 'c36d6e43044252ab121a52138e5aacb0', 'achraf', '', 0);
 
 --
 -- Contraintes pour les tables exportées
