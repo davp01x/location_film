@@ -23,4 +23,5 @@ Fonctionnalités :
   - L'ajout de film ainsi que l'édition intègre désormais les attributs comme prix de location, acteur, réalisateur, catégorie
   
 
-Note : Le base de donnée sous un fichier sql se trouve dans le répertoire public.
+Note : Le base de donnée sous un fichier sql se trouve dans le répertoire public. De plus, pour accéder au site il faut y accéder par : http://localhost/location_film_2/public/film
+
